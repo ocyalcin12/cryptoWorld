@@ -34,7 +34,7 @@ app.get("/order-book", async (req, res) => {
   }
 
   try {
-    const response = await axios.get(`https://api.binance.com/api/v3/depth`, {
+    const response = await axios.get(`https://api.binance.us/api/v3/depth`, {
       params: {
         symbol: symbol,
         limit: 10,
@@ -54,7 +54,7 @@ app.get("/order-book", async (req, res) => {
 app.get("/crypto-prices", async (req, res) => {
   try {
     const response = await axios.get(
-      `https://api.binance.com/api/v3/ticker/24hr`
+      `https://api.binance.us/api/v3/ticker/24hr`
     );
     res.json(response.data);
   } catch (error) {
