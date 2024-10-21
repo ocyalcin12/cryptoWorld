@@ -7,14 +7,15 @@ const port = 3000;
 // API Anahtarları ve URL'ler
 const NEWS_API_KEY = "0894e81bed634324bf71fb88fc4789fa"; // Buraya kendi API anahtarınızı ekleyin
 
-// Views dizinini ve EJS motorunu ayarlayın
+// Views dizinini ayarlayın ve EJS şablon motorunu kullanın
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// Public dosyaları sunun
 app.use(express.static(path.join(__dirname, "public")));
-app.set("views", path.join(__dirname, "views"));
+app.get("/favicon.ico", (req, res) => res.status(204)); // 204 No Content döner
 
-// Ana sayfa için index.ejs'yi render ediyoruz
+// Ana sayfa
 app.get("/", (req, res) => {
   res.render("index");
 });
