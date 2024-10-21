@@ -4,6 +4,9 @@ const path = require("path");
 const app = express();
 const port = 3000;
 
+const cors = require("cors");
+app.use(cors());
+
 // API Anahtarları ve URL'ler
 const NEWS_API_KEY = "0894e81bed634324bf71fb88fc4789fa"; // Buraya kendi API anahtarınızı ekleyin
 
