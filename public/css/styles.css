@@ -1,0 +1,27 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.brand-logo {
+  font-size: 24px;
+}
+
+.bids {
+  background-color: #e8f5e9;
+}
+
+.asks {
+  background-color: #ffebee;
+}
+
+.price-item:hover {
+  background-color: #f1f1f1;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
